@@ -1,12 +1,12 @@
 pm_host_port    = 8006
 pm_tls_insecure = true
 
-instance_description = "" # CHANGEME
-instance_domain      = "" # CHANGEME
+instance_description = "Ansible jumphost"
+instance_domain      = "node.room101.a7d"
 
 clone         = "template-ubuntu-2004-base-image"
-target_node   = "" # CHANGEME
-resource_pool = "" # CHANGEME
+target_node   = "host-03"
+resource_pool = "infrastructure"
 
 os_type                 = "cloud-init"
 cloudinit_cdrom_storage = "nfs-cloudinit"
@@ -14,14 +14,14 @@ citemplate_storage      = "nfs-cloudinit"
 
 resource_cpu_cores   = 1
 resource_cpu_sockets = 1
-resource_memory      = 2048
+resource_memory      = 512
 
 # network config
 network_model = "virtio"
 
 # cloudinit network config
-search_domains = [] # CHANGEME
-dns_servers    = [] # CHANGEME
+search_domains = ["node.room101.a7d", "analbeard.com"]
+dns_servers    = ["10.101.0.55", "10.101.0.60"]
 
 # primary nic config
 net0_network_bridge  = "vmbr0"

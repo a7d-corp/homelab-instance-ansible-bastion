@@ -7,7 +7,7 @@ workflows:
       - init:
           extra_args: [-backend-config=/minio-backend-config/backend-config]
 projects:
-- name: INSTANCE-NAME
+- name: homelab-instance-ansible-bastion
   dir: terraform
   workflow: custom
 

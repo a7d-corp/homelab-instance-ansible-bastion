@@ -1,6 +1,6 @@
-# homelab-instance-template
+# homelab-instance-ansible-bastion
 
-Template repo for managing an instance.
+Jumphost for Ansible to access Tailnet devices
 
 ## Managing secrets
 
@@ -17,7 +17,3 @@ Encryption:
 ```bash
 vault write transit/encrypt/tf-encryption-key -format=json plaintext=$(cat backend-config | base64 -w 0) | jq -r .data.ciphertext > backend-config.enc
 ```
-
-## Template customisation
-
-Replace all occurrences of `INSTANCE-NAME`.
